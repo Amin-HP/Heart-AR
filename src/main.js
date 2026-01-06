@@ -8,7 +8,7 @@ document.querySelector('#app').innerHTML = `
 
 const mindarThree = new MindARThree({
   container: document.querySelector('#container'),
-  imageTargetSrc: (import.meta.env.BASE_URL === '/' ? '' : import.meta.env.BASE_URL) + 'targets.mind',
+  imageTargetSrc: './targets.mind',
 });
 const { renderer, scene, camera } = mindarThree;
 
