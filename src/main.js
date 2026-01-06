@@ -1,4 +1,3 @@
-import './style.css';
 import { MindARThree } from 'mind-ar/dist/mindar-image-three.prod.js';
 import * as THREE from 'three';
 import Butterfly from './Butterfly.js';
