@@ -8,17 +8,17 @@ document.querySelector('#app').innerHTML = `
 
 const mindarThree = new MindARThree({
   container: document.querySelector('#container'),
-  imageTargetSrc: '/assets/targets.mind',
+  imageTargetSrc: (import.meta.env.BASE_URL === '/' ? '' : import.meta.env.BASE_URL) + 'targets.mind',
 });
-const {renderer, scene, camera} = mindarThree;
+const { renderer, scene, camera } = mindarThree;
 
 const anchor = mindarThree.addAnchor(0);
 const geometry = new THREE.BoxGeometry(1, 1, 1);
 const material = new THREE.MeshNormalMaterial();
-const cube = new THREE.Mesh( geometry, material );
+const cube = new THREE.Mesh(geometry, material);
 anchor.group.add(cube);
 
-const start = async() => {
+const start = async () => {
   await mindarThree.start();
   renderer.setAnimationLoop(() => {
     renderer.render(scene, camera);
