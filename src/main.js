@@ -9,6 +9,7 @@ document.querySelector('#app').innerHTML = `
 const mindarThree = new MindARThree({
   container: document.querySelector('#container'),
   imageTargetSrc: './targets.mind',
+
 });
 const { renderer, scene, camera } = mindarThree;
 
