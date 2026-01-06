@@ -55,7 +55,7 @@ const start = async () => {
             anchorNose.group.getWorldPosition(nosePos);
 
             // Apply position to container
-            butterflyContainer.position.lerp(nosePos, 0.05);
+            butterflyContainer.position.lerp(nosePos, 0.15);
             // Force rotation to be zero (always upright)
             butterflyContainer.rotation.set(0, 0, 0);
         }
